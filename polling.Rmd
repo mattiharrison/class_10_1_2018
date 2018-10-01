@@ -15,10 +15,20 @@ library(dplyr)
 
 ```{r}
 polling <- read.csv("polls_IT-parliament_2018-10-01.csv")
-
-polling %>% 
-  glimpse
 ```
 Purpose of this document is to show polling results in Italy.
+
+##Plotting LN 
+
+```{r}
+polling %>% 
+  ggplot(aes(x=date,y=LN, color = "red")) + geom_point() + 
+  geom_point(aes(x=date, y=M5S, color = "blue"))
+```
+
+```{r}
+polling %>% 
+  gather(LN, M5S)
+```
 
 
