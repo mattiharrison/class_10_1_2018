@@ -7,6 +7,16 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+library(dplyr)
+polling <- read.csv("polls_IT-parliament_2018-10-01.csv")
+```
+
+
+```{r}
+polling %>% 
+  View()
 ```
 
 ## R Markdown
